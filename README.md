@@ -11,3 +11,14 @@ a windows command prompt with all windows command prompt features + more
 you can check the wiki for a list of commands
 
 ![butter](butterlogo.png)
+
+
+# instal guide 
+___________________
+
+# first open system32 
+![ez](1st.png)
+# second drag "export to system32.zip" to system32
+![ez](2nd.png)
+# third right click "export to system32.zip" then click "extract here"
+![ez](3rd.png)
