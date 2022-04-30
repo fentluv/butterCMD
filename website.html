@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://geektyper.com/plain/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>GEEKtyper.com - Plain Terminal</title>
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<meta property="og:image" content="http://i.imgur.com/RZG9ghe.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="113">
+<meta name="classification" content="Novelty">
+<meta property="og:title" content="GEEKtyper.com - Plain Terminal">
+<meta property="og:url" content="http://geektyper.com/plain">
+<link id="pagestyle" rel="stylesheet" type="text/css" href="./website_files/style.css">
+<link rel="stylesheet" type="text/css" href="./website_files/windows.css">
+<link rel="stylesheet" type="text/css" href="./website_files/mod.css">
+<script async="" src="./website_files/analytics.js.download"></script><script type="text/javascript" src="./website_files/jquery.min.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./website_files/spectrum.css">
+<script type="text/javascript" src="./website_files/spectrum.js.download"></script>
+<meta name="viewport" content="width=320">
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45751574-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="./website_files/jquery.mousewheel.min.js.download" type="text/javascript"></script>
+<script src="./website_files/script.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+getKernel = localStorage.getItem('kernelZ') || '../ASSETS/kernels/0.txt';
+Typer.file = (getKernel);
+Typer.init();
+</script>
+<script type="text/javascript">
+
+
+var dragContainer = $("body");
+var currentDragData = {
+    offset: {x:0, y:0},
+    target: null
+};
+
+$(document).ready(function(e) {
+    $(document).delegate(".dragme", "mousedown", function(e) {
+        if(!currentDragData.target) {
+            if($(e.currentTarget).hasClass("dragme") && !$(e.target).closest(".folder").length) {
+                currentDragData.target = $(e.currentTarget);
+                currentDragData.target.parent().append(currentDragData.target);
+                currentDragData.offset.x = e.pageX - currentDragData.target.offset().left;//e.offsetX;
+                currentDragData.offset.y = e.pageY - currentDragData.target.offset().top;//e.offsetY;
+            }
+        }
+    });
+	
+    $(document).delegate(".dragme #close", "mouseup", function(e) {
+		$(e.currentTarget).closest(".dragme").hide();
+
+    });
+	/*
+	$(document).delegate(".dragme .folder", "mouseup", function(e) {
+
+		currentDragData.target = null;
+
+	});*/
+	
+    $(document).delegate(".dragme", "mouseup", function(e) {
+        if(currentDragData.target) {
+            currentDragData.target = null;		
+        }	
+    });
+    
+    $(document).mousemove(function(e) {
+        if(currentDragData.target) {
+            e.preventDefault();
+            currentDragData.target.offset({
+                left: e.pageX - currentDragData.offset.x,
+                top: e.pageY - currentDragData.offset.y
+            });
+        }
+    });
+});
+
+function showDraggable(d) {
+	$(d).toggle();
+	$(d).parent().append($(d));
+}
+</script>
+</head>
+<body onload="startTime()">
+<div id="AccessGranted" class="dialog" style="display:none;"><h1>ACCESS GRANTED</h1></div>
+<div id="AccessDenied" class="dialog" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><h1>ACCESS DENIED</h1></div>
+<div id="LevelRequired" class="dialog" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><h1>SECURITY BREACH</h1><h2>LEVEL 3 ACCESS REQUIRED</h2></div>
+
+
+
+
+
+<div id="Countdown" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><h1>Purge Facility</h1>Purging will commence in:<br><br><br><img src="./website_files/countdown.gif"><br><br></div>
+<div id="Password" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><h1>Purge Facility?</h1>Confirm password<br><img src="./website_files/password.gif"></div>
+<div id="Poke" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img id="close" src="./website_files/close1.png"><h1>PROJECT SIOP-62</h1>Nuclear Weapons Program<img src="./website_files/Ec2Z2eb.gif"></div>
+
+<div id="Pony" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img src="./website_files/yb7MK0i.gif"></div>
+<div id="SystemFailure" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"></div>
+<div id="ConnectionLost" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;">Connection Lost<h2>Facility Offline</h2></div>
+<div id="Breach" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img id="close" src="./website_files/close1.png"><h1>SECURITY ALERT</h1>INTERIOR EXOGEN BREACH<img src="./website_files/breach.gif"></div>
+<div id="Evacuate" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img style="background:none;" id="close" src="./website_files/close1.png"><h1>FACILITY BREACHED</h1>CRITICAL EXOGEN BREACH<img src="./website_files/evacuate.gif"></div>
+<div id="Query" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img id="close" src="./website_files/close1.png">Interpol database<img src="./website_files/WZYdsTD.gif"></div>
+
+
+<div id="Numbers" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img src="./website_files/id2kyxB.gif"></div>
+<div id="Radar" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" onclick="if (!window.__cfRLUnblockHandlers) return false; $(&quot;#Radar&quot;).toggle();" style="display:none;"><img id="close" src="./website_files/close1.png"><img src="./website_files/radar.gif"></div>
+<div id="Irc" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img id="close" src="./website_files/close1.png"><img src="./website_files/irc.gif"></div>
+
+
+<div id="Audio" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img id="close" src="./website_files/close1.png">Voice recording<br><img src="./website_files/audio.gif"><img src="./website_files/audio.gif"><img src="./website_files/controls.png"></div>
+<div id="Flash" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img id="close" src="./website_files/close1.png"><img src="./website_files/Bua5h62.gif"></div>
+
+
+
+
+
+<div id="Help" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;">
+<img id="close" src="./website_files/close1.png"><img src="./website_files/hints.png">
+<hr>
+<p>Stats &amp; Achievements</p>
+<div id="LetterCount"></div><br>
+<div id="getAchievement1" class="ac"></div>
+<div id="getAchievement2" class="ac"></div>
+<div id="getAchievement3" class="ac"></div>
+<div id="getAchievement4" class="ac"></div>
+<div id="getAchievement5" class="ac"></div>
+<div id="getAchievement6" class="ac"></div>
+<div id="getAchievement7" class="ac"></div>
+<div id="getAchievement8" class="ac"></div>
+<div id="getAchievement9" class="ac"></div>
+<div id="itemz" style="position:fixed; bottom:20px; right:20px; overflow:hidden;  background-color:#ccc; height:90px; z-index:17">
+<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-3193838836354850";
+	/* omnimoads */
+	google_ad_slot = "2980063218";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	//-->
+	</script>
+<script type="text/javascript" src="./website_files/f.txt">
+	</script>
+</div>
+</div>
+<div id="CustomWindow" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display:none;"><img id="close" src="./website_files/close1.png"><h1 id="bigtitle">Click Edit to set the title</h1><p id="smalltitle">Click Edit to set the title</p><img id="customimage" src="./website_files/placeholder.png">
+<script type="text/javascript">
+bigtitle = localStorage.getItem("bigtitle") || 'Click Edit to set the title';
+smalltitle = localStorage.getItem("smalltitle") || 'Click Edit to set the title';
+customimage = localStorage.getItem("customimage") || '../ASSETS/img/placeholder.png';
+document.getElementById("bigtitle").innerHTML = bigtitle;
+document.getElementById("smalltitle").innerHTML = smalltitle;
+document.getElementById("customimage").src = customimage;
+</script>
+</div>
+<script type="text/javascript">
+
+
+
+</script>
+
+<div id="center">
+</div>
+<div id="dragme">
+<div id="console">
+<button id="button" title="Write code for me" onclick="if (!window.__cfRLUnblockHandlers) return false; var x = setInterval(function(){
+        Typer.addTextAuto(12);
+}, 30);">Automate</button>
+<br>
+<br>
+<div id="txt">1:56:01</div>
+SCP_Secure_Systems_v3.2654.2 <br><br>WARNING: LEVEL 4 Authorisation Needed<br>Press F2 or TAB for help, or type to begin. _</div>
+</div>
+<div id="folders">
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Downloading&quot;);"><p>DL Data</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Console&quot;);"><p>Terminal</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Hash&quot;);"><p>Decryptor</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; $(&quot;#Help&quot;).toggle();"><p>Help</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; $(&quot;#BigFolder&quot;).toggle();"><p>All Scripts</p></div>
+<div id="result2"></div>
+</div>
+<script src="./website_files/keyboard_other.js.download" type="text/javascript"></script>
+<audio loop="" id="caution">
+<source src="../ASSETS/voice/mi6/caution.mp3" type="audio/mp3">
+</audio>
+<audio loop="" id="purge">
+<source src="../ASSETS/voice/mi6/purge.mp3" type="audio/mp3">
+</audio>
+
+
+
+<div id="speechify-focus-mode" style="position: absolute; top: 0px; right: 0px; background: white; width: 100%; min-height: 100%; z-index: 1999; display: none;"></div><div id="speechify-global-notifications"></div><div id="Downloading" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" class="dragme" style="top: 484.5px; left: 959px; display: none;"><img id="close" src="./website_files/close1.png"><h1>Downloading...</h1>Critical Data<br><img src="./website_files/downloading.gif"></div><div id="Neurotoxin" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 562.297px; left: 960px; display: none;"><img id="close" src="./website_files/close1.png"><h1>Flooding Facility</h1>Preparing Neurotoxin Emiters<br><br><img src="./website_files/eHaZXmm.gif"></div><div id="Scan" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 386.5px; left: 763px; display: none;"><img id="close" src="./website_files/close1.png"><h1>Satellite Uplink</h1>Interfacing via Stuttgard<img src="./website_files/nhk5its.gif"></div><div id="Deploy" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 550.5px; left: 1028px; display: none;"><img id="close" src="./website_files/close1.png"><h1>Activating HAWK</h1>Engage all enemy vehicles<img src="./website_files/snY9WtD.gif"></div><div id="Map" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="display: none;"><img id="close" src="./website_files/close1.png"><h1>Tracing Contact</h1><img src="./website_files/vOxo92o.gif"></div><div id="Stability" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 508.5px; left: 980px; display: none;"><img id="close" src="./website_files/close1.png"><img src="./website_files/stability.gif"></div><div id="BigFolder" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 582.4px; left: 1328px; display: none;">
+<img id="close" src="./website_files/close1.png">
+<h2> /root/bash/scripts</h2>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Downloading&quot;);"><p>DL Data</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Hash&quot;);"><p>Hash</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Console&quot;);"><p>Terminal</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Initializing&quot;);"><p>Decryptor</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Map&quot;);"><p>Map</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Scan&quot;);"><p>Scan 6</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Query&quot;);"><p>Query Db</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Deploy&quot;);"><p>Deploy</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Irc&quot;);"><p>Chat</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Tracing&quot;);"><p>Trace</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Neurotoxin&quot;);"><p>Neuro</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Rat&quot;);"><p>Infect</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#AccessDenied&quot;);document.getElementById(&quot;accessdenied&quot;).play();"><p>Root</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Poke&quot;);"><p>SIOP</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Sequence&quot;);"><p>Sequence</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Random&quot;);"><p>Random</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Stability&quot;);"><p>Stability</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Pipe&quot;);"><p>Pipe</p></div>
+<div class="folder" onclick="if (!window.__cfRLUnblockHandlers) return false; showDraggable(&quot;#Audio&quot;);"><p>Audio</p></div>
+</div><div id="Sequence" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 683.297px; left: 1786px;"><img id="close" src="./website_files/close1.png"><img src="./website_files/LlseBPd.gif"></div><div id="Tracing" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 520.797px; left: 1246px;"><img id="close" src="./website_files/close1.png"><img src="./website_files/NnVSoQT.gif"></div><div id="Console" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 273.391px; left: 599px;"><img id="close" src="./website_files/close1.png">Compiling Nodes<br><br><img src="./website_files/msmvE09.gif"></div><div id="Random" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 20.688px; left: 1559px; display: block;"><img id="close" src="./website_files/close1.png"><img src="./website_files/XJsjXT1.gif"></div><div id="Rat" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 66.297px; left: 1109px;"><img id="close" src="./website_files/close1.png"><img src="./website_files/rat.gif"></div><div id="Hash" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 774.391px; left: 638px;"><img id="close" src="./website_files/close1.png"><h1>Password Decryptor</h1>Calculating Hashes<br><img src="./website_files/hash.gif"></div><div id="Pipe" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 691.391px; left: 336px;"><img id="close" src="./website_files/close1.png"><img src="./website_files/pipe.gif"></div><div id="Initializing" class="dragme" ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" style="top: 129.688px; left: 335px; display: block;"><img id="close" src="./website_files/close1.png"><h1>Encrypting</h1><img src="./website_files/PTHgj1N.gif"></div></body></html>
