@@ -11,9 +11,9 @@ a windows command prompt with all windows command prompt features + more
 you can check the wiki for a list of commands
 
 ![butter](butterlogo.png)
+__________________
 
-
-# instal guide 
+# install guide 
 ___________________
 
 # first open system32 
